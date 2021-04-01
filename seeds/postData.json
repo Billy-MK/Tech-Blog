@@ -1,0 +1,14 @@
+[
+    {
+        "title": "How do I come up with good seed data?",
+        "text": "I can't think of good content to create seeds with. Does it even really matter what I put in my seed files?"
+    },
+    {
+        "title": "Front-End, Back-End, or Full-Stack?",
+        "text": "Which is best? Is it better to specialize, or learn full-stack web development?"
+    },
+    {
+        "title": "I hate trailing commas in my objects.",
+        "text": "They're the worst. Nobody can change my mind."
+    }
+]
