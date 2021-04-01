@@ -23,6 +23,17 @@ User.hasMany(Post, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE',
 })
+
+// Comments belong to a post
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id',
+})
+
+// Posts have many comments
+Post.hasMany(Comment, {
+    foreignKey: 'post_id',
+    OnDelete: 'CASCADE'
+})
   
 module.exports = {
     User,
