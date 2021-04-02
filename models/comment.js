@@ -29,8 +29,7 @@ Comment.init(
       },
     },
     date: {
-        type: DataTypes.DATE,
-        allowNull: false
+        type: DataTypes.DATE
     }
   },
   {

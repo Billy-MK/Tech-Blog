@@ -34,8 +34,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'user',
   }
 );
 
-module.exports = Comment;
+module.exports = User;
