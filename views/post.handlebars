@@ -1,13 +1,15 @@
 <div>
-  <div class="post">
-    <h2>{{title}}</h2>
-    <p>{{text}}</p>
-    <p>Created by {{user.username}} on {{format_date createdAt}}</p>
+  <div class="row mb-4 post">
+    <div class="col-md-12">
+      <h2 class="postTitle">{{title}}</h2>
+      <p>{{text}}</p>
+      <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+    </div>
   </div>
   <div>
       <form class="form new-comment-form" postId={{id}}>
       <div class="form-group">
-        <label for="comment-text">text:</label>
+        {{!-- <label for="comment-text">text:</label> --}}
         <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
       </div>
       <div class="form-group">
@@ -17,12 +19,12 @@
   </div>
   <!-- Loop over each object in the posts array -->
   {{#each comments as |comment| }}
-  <div class="row mb-4 comment">
+  <div class="row mb-4 comment" index={{@index}}>
     <div class="col-md-12">
-      <p>
+      <p class="commentText">
         {{comment.comment}}
       </p>
-      <p>Posted by {{comment.user.username}} on </p>
+      <p class="commentInfo">Posted by {{comment.user.username}} on </p>
     </div>
   </div>
   {{/each}}

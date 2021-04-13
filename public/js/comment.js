@@ -25,6 +25,19 @@ const newFormHandler = async (event) => {
     }
 };
 
+const comments = document.querySelectorAll(".comment");
+comments.forEach(comment => {
+    let index = comment.getAttribute('index');
+    if (index % 2 === 0) {
+        comment.className = "evenComment";
+        console.log("Did it work?")
+    } else {
+        comment.className = "oddComment"
+    }
+});
+
+
+
   document
   .querySelector('.new-comment-form')
   .addEventListener('submit', newFormHandler);
