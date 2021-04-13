@@ -5,7 +5,7 @@
     <p>Created by {{user.username}} on {{format_date createdAt}}</p>
   </div>
   <div>
-      <form class="form new-comment-form">
+      <form class="form new-comment-form" postId={{id}}>
       <div class="form-group">
         <label for="comment-text">text:</label>
         <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
@@ -22,8 +22,10 @@
       <p>
         {{comment.comment}}
       </p>
-      <p>Posted by {{comment.user.username}} on {{format_date comment.createdAt}}</p>
+      <p>Posted by {{comment.user.username}} on </p>
     </div>
   </div>
   {{/each}}
 </div>
+
+<script src="/js/comment.js"></script>
