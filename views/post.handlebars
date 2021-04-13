@@ -7,6 +7,7 @@
     </div>
   </div>
   <div>
+    {{#if logged_in}}
       <form class="form new-comment-form" postId={{id}}>
       <div class="form-group">
         {{!-- <label for="comment-text">text:</label> --}}
@@ -16,6 +17,9 @@
         <button type="submit" class="btn btn-primary">Comment</button>
       </div>
     </form>
+    {{else}}
+      <div><a href="/login">Log in</a> to leave a comment</div><br>
+    {{/if}}
   </div>
   <!-- Loop over each object in the posts array -->
   {{#each comments as |comment| }}
@@ -24,7 +28,7 @@
       <p class="commentText">
         {{comment.comment}}
       </p>
-      <p class="commentInfo">Posted by {{comment.user.username}} on </p>
+      <p class="commentInfo">Posted by {{comment.user.username}} on {{format_date comment.createdAt}}</p>
     </div>
   </div>
   {{/each}}

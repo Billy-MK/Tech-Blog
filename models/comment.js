@@ -27,14 +27,11 @@ Comment.init(
         model: 'user',
         key: 'id'
       },
-    },
-    date: {
-        type: DataTypes.DATE
     }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',
