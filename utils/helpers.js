@@ -8,5 +8,5 @@ module.exports = {
         day: 'numeric',
         weekday: 'short'
       });
-    },
+    }
 };

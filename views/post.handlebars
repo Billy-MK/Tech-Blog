@@ -7,7 +7,9 @@
     </div>
   </div>
   <div>
+    {{!-- Create comment form --}}
     {{#if logged_in}}
+    <div id="commentErrorMessage"></div>
       <form class="form new-comment-form" postId={{id}}>
       <div class="form-group">
         {{!-- <label for="comment-text">text:</label> --}}
@@ -21,14 +23,24 @@
       <div><a href="/login">Log in</a> to leave a comment</div><br>
     {{/if}}
   </div>
-  <!-- Loop over each object in the posts array -->
-  {{#each comments as |comment| }}
+  <!-- Loop over each comment in the post array -->
+  {{#each comments as |comment|}}
   <div class="row mb-4 comment" index={{@index}}>
     <div class="col-md-12">
+      {{!-- Comment text goes here --}}
       <p class="commentText">
         {{comment.comment}}
       </p>
-      <p class="commentInfo">Posted by {{comment.user.username}} on {{format_date comment.createdAt}}</p>
+      {{!-- Info about user goes here --}}
+      <p class="commentInfo">
+        Posted by {{comment.user.username}} on {{format_date comment.createdAt}}
+      </p>
+      {{!-- Delete/Edit buttons display if the comment was made by the user that is currently signed in --}}
+      {{#if (eq ../sessionID comment.user_id)}}
+      <div class="commentControl">
+        <a href="/" class="commentDelete" data-id={{comment.id}}>Delete</a>
+      </div>
+      {{/if}}
     </div>
   </div>
   {{/each}}

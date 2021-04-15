@@ -9,12 +9,16 @@
     background-color: azure;
     box-shadow: 1px 2px 4px rgb(128, 135, 136);
     padding-top: 3px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .oddComment {
     background-color: rgb(236, 248, 250);
     box-shadow: 1px 2px 4px rgb(128, 135, 136);
     padding-top: 3px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .header {
@@ -30,7 +34,6 @@
 .commentInfo {
     color: #6e6f70;
     font-size: 14px;
-    padding-bottom: 3px;
 }
 
 .commentText {
@@ -40,4 +43,10 @@
 .postInfo {
     color: #6e6f70;
     font-size: 14px;
+}
+
+#commentErrorMessage {
+    color: rgb(235, 30, 30);
+    font-weight: bold;
+    font-size: small
 }
