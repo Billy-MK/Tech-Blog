@@ -1,17 +1,22 @@
 [
     {
-      "comment": "Great post!"
+      "comment": "Great post!",
+      "post_id": 1
     },
     {
-      "comment": "This is really interesting."
+      "comment": "This is really interesting.",
+      "post_id": 1
     },
     {
-      "comment": "This is bad and you should feel bad."
+      "comment": "This is bad and you should feel bad.",
+      "post_id": 2
     },
     {
-      "comment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "comment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "post_id": 2
     },
     {
-      "comment": "Bump"
+      "comment": "Bump",
+      "post_id": 3
     }
 ]

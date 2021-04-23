@@ -8,7 +8,8 @@
     <p>
       {{post.text}}
     </p>
-    <p class="postInfo">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+    <p class="postInfo"><a class="postInfo" href="/post/{{post.id}}"><span class="commentLength" commentLength="{{post.comments.length}}">{{post.comments.length}}</span></a> | Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
   </div>
 </div> 
 {{/each}}
+<script src="./js/homepage.js"></script>

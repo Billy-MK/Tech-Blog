@@ -35,7 +35,6 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-    console.log("response")
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
 
@@ -60,8 +59,6 @@ comments.forEach(comment => {
         comment.className = "oddComment"
     }
 });
-
-
 
   document
   .querySelector('.new-comment-form')

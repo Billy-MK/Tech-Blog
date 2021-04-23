@@ -54,3 +54,7 @@
 .deleteButton {
     float: right
 }
+
+h2, h3 {
+    color: rgb(47, 93, 180)
+}

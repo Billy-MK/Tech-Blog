@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controller');
 const helpers = require('./utils/helpers');
 var handlebarshelpers = require('handlebars-helpers')();
+var compression = require('compression')
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -24,6 +25,9 @@ const sess = {
     db: sequelize
   })
 };
+
+// Compresses responses
+app.use(compression());
 
 app.use(session(sess));
 

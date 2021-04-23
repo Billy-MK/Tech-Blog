@@ -15,7 +15,7 @@ Post.init(
       type: DataTypes.STRING
     },
     text: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING(1000)
     },
     createdAt: {
         type: DataTypes.DATE,
