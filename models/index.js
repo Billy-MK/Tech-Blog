@@ -1,6 +1,6 @@
-const User = require("./user.js");
-const Post = require("./post.js");
-const Comment = require("./comment.js");
+const User = require("./User.js");
+const Post = require("./Post.js");
+const Comment = require("./Comment.js");
 
 // Comments belong to a user
 Comment.belongsTo(User, {
