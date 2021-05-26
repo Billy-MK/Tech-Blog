@@ -29,12 +29,15 @@
 
     {{#each posts as |post|}}
     <div class="row mb-2 post">
-      <div class="col-md-10">
+      <div class="col-sm-9">
         <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
       </div>
-      <div class="col-md-2">
-        <button class="btn btn-sm btn-danger deleteButton" data-id="{{post.id}}">DELETE</button>
+      <div>
+          <button class="btn btn-sm btn-info editButton postButton" data-id="{{post.id}}">EDIT</button>
+          <button class="btn btn-sm btn-danger deleteButton postButton" data-id="{{post.id}}">DELETE</button>
       </div>
+      <textarea class="editPostTextArea" id="textArea{{post.id}}">{{post.text}}</textarea>
+      <button class="btn btn-sm btn-info confirmEditButton" id="editConfirm{{post.id}}" data-id="{{post.id}}">Confirm changes</button>
     </div>
     {{/each}}
   </div>

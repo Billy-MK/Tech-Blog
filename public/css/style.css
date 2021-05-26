@@ -58,3 +58,22 @@
 h2, h3 {
     color: rgb(47, 93, 180)
 }
+
+.postButton {
+    width: 70px;
+}
+
+.editPostTextArea {
+    display: none;
+    width:100%;
+    margin: 2%;
+    padding: 2%;
+    background-color:aliceblue;
+    height: auto
+}
+
+.confirmEditButton {
+    margin-left: 3%;
+    display: none;
+    margin-bottom: 1%;
+}
